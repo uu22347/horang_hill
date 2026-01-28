@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>호랑가시나무 게스트하우스</title>
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <main>
+            <!-- 1. hero배너 + 검색폼 -->
+            <div id="hero_bnr">
+                <div class="ad_txt">
+                    <p>자연과 힐링이 공존하는 곳</p>
+                    <h1>호랑나무가시언덕 게스트하우스로 오세요</h1>
+                </div>
+                <!-- action= 객실, 날짜, 인원 정보를 저장할 서버위치 -->
+                <!-- method= 객실, 날짜, 인원 정보에 대한 보안 여부(post)보안함 -->
+                <form action="#" method="get">
+                    <div class="room">
+                        <h2>객실</h2>
+                        <p>
+                            <select name="room_type" id="room_type"><!-- name(그룹명) id(css,js) -->
+                                <option value="type1">포사이드방(2/3인)</option><!-- value(서버전송값) -->
+                                <option value="type2">우월순방(2/3인)</option>
+                                <option value="type3">배유지방(2/3인)</option>
+                            </select>
+                        </p>
+                    </div>
+                    <div class="check_in_out">
+                        <div class="in">
+                            <h2>체크인</h2>
+                            <p>
+                                <input type="date"
+                                value="2026-01-28"
+                                min="2026-01-28"
+                                max="2026-02-10"
+                                name="in_date" id="in_date"
+                                >
+                            </p>
+                        </div>
+                        <div class="day">
+                            <img src="" alt="">
+                            <em>2박</em>
+                        </div>
+                        <div class="out">
+                            <h2>체크아웃</h2>
+                            <p>
+                                <input type="date"
+                                value="2026-01-29"
+                                min="2026-01-29"
+                                max="2026-02-15"
+                                name="out_date" id="out_date"
+                                >
+                            </p>
+                        </div>
+                    </div>
+                    <div class="person">
+                        <h2>인원</h2>
+                        <ul class="number">
+                            <li>
+                                <label for="adult">성인</label>
+                                <input type="number" id="adult" name="adult" value="=1">
+                            </li>
+                            <li>
+                                <label for="kid">어린이</label>
+                                <input type="number" id="kid" name="kid" value="=1">
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 요소를 클릭 시 특정페이지로 바로 이동하면 <a> -->
+                    <!-- 요소를 클릭 시 조건에 따라 분기가 갈린다면 <button> -->
+                    <!-- 버튼 종류 : submit(서버전송), button(전송 포함 범용) -->
+                    <p><button type="submit" id="search_button">검색</button></p>
+                </form>
+            </div><!-- e: hero_bnr -->
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

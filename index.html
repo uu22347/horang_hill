@@ -7,11 +7,15 @@
     <meta name="keywords" content="">
     <title>호랑가시나무 게스트하우스</title>
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/index.css">
 </head>
 <body>
     <div id="wrap">
         <header>
-            <h1><a href="#"><img src="#" alt="호랑가시나무게스트하우스"></a></h1>
+            <h1><a href="./index.html"><img src="./images/logo.png" alt="호랑가시나무게스트하우스"></a></h1>
             <nav>
                 <ul id="gnb">
                     <li><a href="#">호랑가시나무언덕 소개</a>
@@ -29,17 +33,17 @@
                         <ul class="gnb_depth2">
                             <li><a href="#">Standard</a>
                                 <ul class="gnb_depth3">
-                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                    <li><a href="#">상세정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Deluxe</a>
                                 <ul class="gnb_depth3">
-                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                    <li><a href="#">상세정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Dormitory</a>
                                 <ul class="gnb_depth3">
-                                    <li><a href="#">상세 정보 및 비치품 목록</a></li>
+                                    <li><a href="#">상세정보 및 비치품 목록</a></li>
                                 </ul>
                             </li>
                         </ul><!-- e:depth2 소개 -->
@@ -96,55 +100,85 @@
                 </div>
                 <!-- action= 객실, 날짜, 인원 정보를 저장할 서버위치 -->
                 <!-- method= 객실, 날짜, 인원 정보에 대한 보안 여부(post)보안함 -->
-                <form action="#" method="get">
+                <form action="#" method="get" id="reservation_form">
                     <div class="room">
                         <h2>객실</h2>
-                        <p>
-                            <select name="room_type" id="room_type"><!-- name(그룹명) id(css,js) -->
-                                <option value="type1">포사이드방(2/3인)</option><!-- value(서버전송값) -->
+                        <div class="room_type">
+                            <a href="#">
+                                <span class="name">포사이드방<span>(2/3인)</span></span>
+                                <img src="./images/arrow.png" alt="화살표">
+                            </a>
+                            <div class="room_open">
+                                <a href="#"><span class="name">서로득방<span>(3/4인)</span></span></a>
+                                <a href="#"><span class="name">서서평방<span>(1/2인)</span></span></a>
+                            </div>
+                        </div>
+                        <!-- <p>
+                            <select name="room_type" id="room_type">
+                                <option value="type1">포사이드방(2/3인)</option>
                                 <option value="type2">우월순방(2/3인)</option>
                                 <option value="type3">배유지방(2/3인)</option>
                             </select>
-                        </p>
+                        </p> -->
                     </div>
                     <div class="check_in_out">
                         <div class="in">
                             <h2>체크인</h2>
-                            <p>
+                            <div class="chk_in">
+                                <a href="#">
+                                    <span class="date">2026-02-20</span>
+                                    <img src="./images/arrow.png" alt="화살표">
+                                </a>
+                            </div>
+                            <!-- <p>
                                 <input type="date"
                                 value="2026-01-28"
                                 min="2026-01-28"
                                 max="2026-02-10"
                                 name="in_date" id="in_date"
                                 >
-                            </p>
+                            </p> -->
                         </div>
                         <div class="day">
-                            <img src="#" alt="">
-                            <em>2박</em>
+                            <img src="./images/moon.png" alt="">
+                            <em>10박</em>
                         </div>
                         <div class="out">
                             <h2>체크아웃</h2>
-                            <p>
+                            <div class="chk_out">
+                                <a href="#">
+                                    <span class="date">2026-02-30</span>
+                                    <img src="./images/arrow.png" alt="화살표">
+                                </a>
+                            </div>
+                            <!-- <p>
                                 <input type="date"
                                 value="2026-01-29"
                                 min="2026-01-29"
                                 max="2026-02-15"
                                 name="out_date" id="out_date"
                                 >
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                     <div class="person">
                         <h2>인원</h2>
                         <ul class="number">
                             <li>
-                                <label for="adult">성인</label>
-                                <input type="number" id="adult" name="adult" value="1">
+                                <button type="button" id="adult_add" class="number_btn"><img src="./images/plus.png" alt="증가"></button>
+                                <span>
+                                    <label for="adult">성인</label>
+                                    <input type="number" id="adult" name="adult" value="1">
+                                </span>
+                                <button type="button" id="adult_remove" class="number_btn"><img src="./images/minus.png" alt="감소"></button>
                             </li>
                             <li>
-                                <label for="kid">어린이</label>
-                                <input type="number" id="kid" name="kid" value="1">
+                                <button type="button" id="kid_add" class="number_btn"><img src="./images/plus.png" alt="증가"></button>
+                                <span>
+                                    <label for="kid">어린이</label>
+                                    <input type="number" id="kid" name="kid" value="1">
+                                </span>
+                                <button type="button" id="kid_remove" class="number_btn"><img src="./images/minus.png" alt="감소"></button>
                             </li>
                         </ul>
                     </div>
@@ -155,7 +189,9 @@
                 </form>
             </div><!-- e: hero_bnr -->
         </main>
-        <footer></footer>
+        <footer>
+            <p>2026 &copy; copyright 호랑가시나무게스트하우스</p>
+        </footer>
     </div>
 </body>
 </html>

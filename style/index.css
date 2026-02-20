@@ -1,0 +1,85 @@
+/* index.css */
+#wrap main {}
+#wrap main #hero_bnr {
+    height:830px; min-width: 1220px;
+    background-image: url(../images/benner.jpg);
+    background-size:cover;
+    background-position:center;
+    padding-top: 485px; 
+}
+#wrap main #hero_bnr .ad_txt {
+    text-align: center;
+}
+#wrap main #hero_bnr .ad_txt p {font-size: 1.88rem; font-weight: 600;}
+#wrap main #hero_bnr .ad_txt h1 {font-size: 3.13rem; font-weight: 700;}
+#wrap main #hero_bnr .ad_txt p,
+#wrap main #hero_bnr .ad_txt h1 {
+    /* text-shadow:x 흐림,색상; */
+    text-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    color: #fff; line-height: 1.5;
+    font-family:'noto sans kr', sans-serif;
+}
+#wrap main #hero_bnr #reservation_form {
+    width:965px;
+    margin:0 auto;
+    padding:15px 20px;
+    border-radius:10px;
+    background-color:rgba(255, 255, 255, 0.6);
+    display: flex; /* 객실~체크인아웃~인원~검색 자식들 정렬 flex */
+}
+/* ----------------------------------------객실~인원 공통디자인 */
+#wrap main #hero_bnr #reservation_form .room h2,
+#wrap main #hero_bnr #reservation_form .check_in_out .in h2,
+#wrap main #hero_bnr #reservation_form .check_in_out .out h2,
+#wrap main #hero_bnr #reservation_form .preson h2 {
+    background-color: yellow;
+}
+#wrap main #hero_bnr #reservation_form h2+div,
+#wrap main #hero_bnr #reservation_form ul li {
+    background-color: lime;
+}
+/* ----------------------------------------객실선택 */
+#wrap main #hero_bnr #reservation_form .room {}
+#wrap main #hero_bnr #reservation_form .room h2 {}
+#wrap main #hero_bnr #reservation_form .room .room_type {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a .name {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a .name span {}
+#wrap main #hero_bnr #reservation_form .room .room_type > a img {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name {}
+#wrap main #hero_bnr #reservation_form .room .room_type .room_open a .name span {}
+/* ----------------------------------------체크인/아웃날짜 */
+#wrap main #hero_bnr #reservation_form .check_in_out {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in h2 {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .chk_in {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .chk_in a {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .chk_in a .date {}
+#wrap main #hero_bnr #reservation_form .check_in_out .in .chk_in a img {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day img {}
+#wrap main #hero_bnr #reservation_form .check_in_out .day em {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out h2 {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .chk_out {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .chk_out a {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .chk_out a .date {}
+#wrap main #hero_bnr #reservation_form .check_in_out .out .chk_out a img {}
+/* ----------------------------------------체크인/인원 */
+#wrap main #hero_bnr #reservation_form .preson {}
+#wrap main #hero_bnr #reservation_form .preson h2 {}
+#wrap main #hero_bnr #reservation_form .preson .number {}
+#wrap main #hero_bnr #reservation_form .preson .number li {}
+#wrap main #hero_bnr #reservation_form .preson .number li .number_btn {}/* 공통버튼 */
+#wrap main #hero_bnr #reservation_form .preson .number li .number_btn img {}
+#wrap main #hero_bnr #reservation_form .preson .number li #adult_add {}
+#wrap main #hero_bnr #reservation_form .preson .number li #adult_remove {}
+#wrap main #hero_bnr #reservation_form .preson .number li span {}
+#wrap main #hero_bnr #reservation_form .preson .number li span label {}
+#wrap main #hero_bnr #reservation_form .preson .number li span #adult {}
+#wrap main #hero_bnr #reservation_form .preson .number li span #kid {}
+#wrap main #hero_bnr #reservation_form .preson .number li span #kid_add {}
+#wrap main #hero_bnr #reservation_form .preson .number li span #kid_remove {}
+

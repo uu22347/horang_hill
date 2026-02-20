@@ -1,0 +1,56 @@
+/* 공통디자인 common.css */
+/* header, footer */
+body {}
+#wrap {}
+#wrap header {
+    background-color: rgba(0,0,0,0.9);
+    height: 70px; padding: 0 80px;
+    min-width:1220px;
+    display: flex;
+    flex-flow:row nowrap;
+    justify-content:space-between;
+    align-items: center;
+    /* 스크롤 이동시 고정 */
+    position: fixed; left:0; top:0; z-index:999; width:100%;
+}
+#wrap header h1 {}
+#wrap header h1 a {}
+#wrap header h1 a img {}
+/* 호랑가시나무언덕소개~ 고객센터까지 모든 gnb + lnb 공통 선택자*/
+#wrap header nav {}
+#wrap header nav #gnb {
+    display: flex;/* li */
+    flex-flow: row nowrap; gap:20px;
+}
+#wrap header nav #gnb a:hover {color: #FFB3C5 !important;}/* 공통 a */
+#wrap header nav #gnb > li {position: relative;}/* 첫번째 서브 기준 */
+#wrap header nav #gnb > li:hover .gnb_depth2 {display: block;}
+#wrap header nav #gnb > li > a {
+    color: #fff;
+    line-height: 70px; display: block;
+}
+#wrap header nav #gnb > li > .gnb_depth2 {/* 첫번째 서브 */
+    background-color: #A43F3F;
+    position: absolute;
+    width: 160px;
+    left:50%; transform: translateX(-50%);/* absolute부모 x축 정중앙 */
+    display:none;
+}
+#wrap header nav #gnb > li > .gnb_depth2 > li {}
+#wrap header nav #gnb > li > .gnb_depth2 > li > a {
+    color: #fff; text-align: center;
+    display: block; line-height: 46px;
+}
+#wrap header nav #gnb > li > .gnb_depth2 > li:hover .gnb_depth3 {display: block;}
+#wrap header nav #gnb > li > .gnb_depth2 > li > .gnb_depth3 {
+    background-color: #BF6666;
+    display:none;
+}
+#wrap header nav #gnb > li > .gnb_depth2 > li > .gnb_depth3 li {}
+#wrap header nav #gnb > li > .gnb_depth2 > li > .gnb_depth3 li a {
+    color: #fff; text-align: center;
+    display: block; line-height: 46px;
+}
+/* footer-------------------------------------------------- */
+#wrap footer {}
+#wrap footer p {}

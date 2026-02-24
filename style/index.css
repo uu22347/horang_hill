@@ -147,42 +147,40 @@
     font-size: 0.88rem;
     position:relative; left:0; top: 13px;
 }
-/* ----------------------------------------메인 콘텐츠 */
-#wrap main .contents1,
-#wrap main .contents2 {width: 1220px;}
-#wrap main .bg_color {width: 1920px; background-color: #F5F5F5; padding: 30px;}
-#wrap main .contents1 {
+/* ---------------------------------------- 2. 양림동 호랑가시나무 소개  */
+#wrap main #contents_guest_bg {
     background-color: #F5F5F5;
-    margin: 40px auto;
 }
-#wrap main .contents1 h2 {
-    font-size: 1.5rem; font-weight: 500;
+#wrap main #contents_guest_bg #contents_guest {}
+#wrap main #contents_guest_bg #contents_guest h1 {}
+#wrap main #contents_guest_bg #contents_guest p {}/* 공통 */
+#wrap main #contents_guest_bg #contents_guest h1+p {}
+#wrap main #contents_guest_bg #contents_guest p:last-child {}
+#wrap main #contents_guest_bg #contents_guest p:last-child img {width:100%;}
+/* ---------------------------------------- 3. 관광지 소개  */
+#wrap main #contents_tourist {}
+#wrap main #contents_tourist h1 {}
+#wrap main #contents_tourist p {}
+#wrap main #contents_tourist .tourist_g {
+    display:flex; flex-flow: row nowrap;
+    justify-content: space-between;/* 메인축정렬 */
+    margin: 0 0 50px; /* ul+a(more)의 여백 */
 }
-#wrap main .contents1 p {
-    font-size: 0.94rem; color: #555;
-    margin: 30px 0;
+#wrap main #contents_tourist .tourist_g li {width: calc((100% - 60px) / 4);}
+#wrap main #contents_tourist .tourist_g li a {
+    overflow: hidden;
+    height: 250px; display:block;
+    margin: 0 0 10px;/* img+a의 여백 */
 }
-#wrap main .contents1 img {}
-#wrap main .contents2 {margin: 70px auto;}
-#wrap main .contents2 h2 {font-size: 1.5rem; font-weight: 500;}
-#wrap main .contents2 p {
-    font-size: 0.94rem; color: #555;
-    margin: 30px 0;
+#wrap main #contents_tourist .tourist_g li a img {width:100%;}
+#wrap main #contents_tourist .tourist_g li a:hover img {width:120%;}
+#wrap main #contents_tourist .tourist_g li h2 {
+    font-size: 1.13rem; font-weight: 500;
 }
-#wrap main .contents2 .tourist_g {
-    display: flex; flex-flow: row nowrap;
-    justify-content: space-between;
-    padding-bottom: 80px;
-}
-#wrap main .contents2 .tourist_g .tourist {}
-#wrap main .contents2 .tourist_g .tourist a {}
-#wrap main .contents2 .tourist_g .tourist a img {}
-#wrap main .contents2 .tourist_g .tourist h3 {
-    font-size: 1.13rem; font-weight: 500; margin-top: 10px;
-}
-#wrap main .contents2 > a {
-    text-decoration-line: underline;
-    display: flex; flex-flow: column nowrap;
-    align-items: center;
+#wrap main #contents_tourist .more {
+    margin:0 auto; display:block;
+    width:max-content;
+    /*text-decoration-line:underline; 밑줄과 글자사이 여백불가능 */
+    border-bottom: 1px solid #000; font-size: 0.94rem;
 }
 

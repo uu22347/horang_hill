@@ -59,5 +59,13 @@ body {}
 #wrap footer .container_layout {
     width:1220px; margin: 0 auto; padding:70px 0 ;
 }
-#wrap main .container_layout h1 {font-size: 1.5rem; font-weight: 500; margin: 0 0 30px;}
+#wrap main .container_layout h1 {font-size: 1.5rem; font-weight: 600; margin: 0 0 30px;}
 #wrap main .container_layout h1+p {font-size: 0.94rem; color: #555; margin: 0 0 30px; line-height: 1.7;}
+/* main link-------------------------------------------------- */
+#wrap main #contents_tourist .link,
+#wrap main #contents_room .link {
+    margin:0 auto; display:block;
+    width:max-content;
+    /*text-decoration-line:underline; 밑줄과 글자사이 여백불가능 */
+    border-bottom: 1px solid #000; font-size: 0.94rem;
+}

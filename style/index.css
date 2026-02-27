@@ -189,6 +189,7 @@
     justify-content: space-between
 }
 #wrap main #contents_room .room_g li {}
+#wrap main #contents_room .room_g li .action {}
 #wrap main #contents_room .room_g li a {}
 #wrap main #contents_room .room_g li a img {}
 #wrap main #contents_room .room_g li h2 {
@@ -204,17 +205,18 @@
 #wrap main #contents_directions .title_g p {font-size: 1rem; color: #000;}
 #wrap main #contents_directions img {margin: 0 0 30px;}
 #wrap main #contents_directions .traffic {margin-bottom: 30px;}
-#wrap main #contents_directions .traffic h1 {font-weight: 700; color: #555; line-height: 1.7;}
+#wrap main #contents_directions .traffic h2 {font-weight: 700; color: #555; line-height: 1.7; font-size: 1.5rem;}
 #wrap main #contents_directions .traffic p {font-size:0.94rem; color: #555; line-height: 1.8;}
 /* ----------------------------------------footer  */
 footer {
 }
 footer #footer_bg  {background-color: #000; }
-footer #footer_bg #adress {
+footer #footer_bg address {
     padding: 70px 0;
     width:1220px; margin: 0 auto;
 }
-footer #footer_bg #adress p {
+footer #footer_bg address span {
+    display: block;
     font-size: 0.81rem; line-height:2; color: #fff;
 }
 
